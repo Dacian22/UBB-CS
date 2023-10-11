@@ -28,8 +28,7 @@ public class JavaUniversity {
     public float average_notes(int[] notes){
         int sum=0;
         for(int i = 0; i< notes.length; i++){
-            int note_rounded = this.round(notes[i]);
-            sum+=note_rounded;
+            sum+=notes[i];
         }
         return (float) sum / notes.length;
     }
