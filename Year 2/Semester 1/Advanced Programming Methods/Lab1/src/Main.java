@@ -1,17 +1,345 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+package src;
+
+import java.util.ArrayList;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) throws Exception {
+        Main.test_prob_1_method_1();
+        Main.test_prob_1_method_2();
+        Main.test_prob_1_method_3();
+        Main.test_prob_1_method_4();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Main.test_prob_2_method_1();
+        Main.test_prob_2_method_2();
+        Main.test_prob_2_method_3();
+        Main.test_prob_2_method_4();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        Main.test_prob_3_method_1();
+        Main.test_prob_3_method_2();
+        Main.test_prob_3_method_3();
+        Main.test_prob_3_method_4();
+
+        Main.test_prob_4_method_1();
+        Main.test_prob_4_method_2();
+        Main.test_prob_4_method_3();
+        Main.test_prob_4_method_4();
+
+    }
+
+    public static void test_prob_1_method_1() throws Exception {
+        JavaUniversity uni = new JavaUniversity();
+        int[] notes = {100, 2, 3, 4};
+        ArrayList<Integer> result = new ArrayList<>();
+        result = uni.insufficient_notes(notes);
+        assert result.size() == 3;
+
+
+        try {
+            int[] notes2 = {};
+            result = uni.insufficient_notes(notes2);
+            assert false;
+        } catch (Exception ignored) {
+
         }
+
+    }
+
+    public static void test_prob_1_method_2() throws Exception {
+        JavaUniversity uni = new JavaUniversity();
+        int[] notes = {100, 2, 3, 4};
+        float result = uni.average_notes(notes);
+        assert result == 27.25;
+
+
+        try {
+            int[] notes2 = {};
+            result = uni.average_notes(notes2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_1_method_3() throws Exception {
+        JavaUniversity uni = new JavaUniversity();
+        int[] notes = {100, 2, 3, 4, 58};
+        ArrayList<Integer> result = new ArrayList<>();
+        result = uni.rounded_notes(notes);
+        assert result.get(4) == 60;
+        assert result.get(3) == 4;
+
+
+        try {
+            int[] notes2 = {};
+            result = uni.rounded_notes(notes2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_1_method_4() throws Exception {
+        JavaUniversity uni = new JavaUniversity();
+        int[] notes = {2, 3, 4, 58};
+        int result = uni.maxima_rounded_note(notes);
+        assert result == 60;
+
+
+        try {
+            int[] notes2 = {};
+            result = uni.maxima_rounded_note(notes2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_2_method_1() throws Exception {
+        ArrayOperations op = new ArrayOperations();
+
+        int[] array = {1, 2, 5, 3, 4};
+
+        int result = op.maximum(array);
+        assert result == 5;
+
+        try {
+            int[] array2 = {};
+            result = op.maximum(array2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_2_method_2() throws Exception {
+        ArrayOperations op = new ArrayOperations();
+
+        int[] array = {1, 2, 5, 0, 3, 4};
+
+        int result = op.minimum(array);
+        assert result == 0;
+
+        try {
+            int[] array2 = {};
+            result = op.minimum(array2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_2_method_3() throws Exception {
+        ArrayOperations op = new ArrayOperations();
+
+        int[] array = {1, 2, 5, 3, 4};
+
+        int result = op.maximal_sum(array);
+        assert result == 14;
+
+        try {
+            int[] array2 = {};
+            result = op.maximal_sum(array2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_2_method_4() throws Exception {
+        ArrayOperations op = new ArrayOperations();
+
+        int[] array = {1, 2, 5, 3, 4};
+
+        int result = op.minimal_sum(array);
+        assert result == 10;
+
+        try {
+            int[] array2 = {};
+            result = op.minimal_sum(array2);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_3_method_1() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1, 2, 3};
+        int[] b = {9, 1, 9};
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.sum(a, b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 0;
+        assert result.get(2) == 4;
+        assert result.get(3) == 2;
+
+        try {
+            int[] c = {0, 1};
+            int[] d = {1};
+            result = bn.sum(c, d);
+            assert false;
+        } catch (Exception e) {
+
+        }
+
+    }
+
+    public static void test_prob_3_method_2() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1, 2, 3};
+        int[] b = {9, 1, 9};
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.difference(b, a);
+        assert result.get(0) == 7;
+        assert result.get(1) == 9;
+        assert result.get(2) == 6;
+
+        try {
+            int[] c = {0, 1};
+            int[] d = {1};
+            result = bn.difference(c, d);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_3_method_3() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1, 2, 3};
+        int b = 10;
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.multiplication(a, b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 2;
+        assert result.get(2) == 3;
+        assert result.get(3) == 0;
+
+        try {
+            int[] c = {};
+            int d = 4;
+            result = bn.multiplication(c, d);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_3_method_4() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1, 2, 3};
+        int b = 10;
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.division(a, b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 2;
+
+        try {
+            int[] c = {};
+            int d = 4;
+            result = bn.division(c, d);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_1() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1, 2, 3};
+
+        int result = es.billigsteTastatur(a);
+        assert result == 1;
+
+        try {
+            int[] c = {};
+            result = es.billigsteTastatur(c);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_2() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1, 2, 3};
+
+        int result = es.teurersteGegenstand(a);
+        assert result == 3;
+
+        try {
+            int[] c = {};
+            result = es.teurersteGegenstand(c);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+    public static void test_prob_4_method_3() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1, 2, 3, 10, 15};
+
+        int result = es.teuersteLaufwerk(a, 11);
+        assert result == 10;
+
+        try {
+            int[] c = {};
+            result = es.teuersteLaufwerk(c, 10);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_4() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {40, 50, 60};
+        int[] b = {8, 12};
+
+        int result = es.setup(60, a, b);
+        assert result == 59;
+
+        try {
+            int[] c = {};
+            int[] d = {10};
+
+            result = es.setup(10, c, d);
+            assert false;
+        } catch (Exception ignored) {
+
+        }
+
     }
 }
