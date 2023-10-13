@@ -49,8 +49,6 @@ public class ElectronikShop {
             throw new Exception("Array length 0");
         }
         int max = Integer.MIN_VALUE;
-        Arrays.stream(tastaturen).sorted();
-        Arrays.stream(laufwerk).sorted();
 
         for (int i = 0 ;i< tastaturen.length;i++){
             for (int j = 0 ;j< laufwerk.length;j++) {

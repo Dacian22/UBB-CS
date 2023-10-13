@@ -367,11 +367,11 @@ public class Main {
     public static void test_prob_4_method_4() throws Exception {
         ElectronikShop es = new ElectronikShop();
 
-        int[] a = {1,2,3, 10, 15};
-        int[] b = {16,20,13,25};
+        int[] a = {40,50,60};
+        int[] b = {8,12};
 
-        int result = es.setup(25,a,b);
-        assert result == 23;
+        int result = es.setup(60,a,b);
+        assert result == 59;
 
         try{
             int[] c ={};
