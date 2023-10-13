@@ -14,11 +14,11 @@ public class JavaUniversity {
         return note;
     }
 
-    public List<Integer> insufficient_notes(int[] notes) throws Exception {
+    public ArrayList<Integer> insufficient_notes(int[] notes) throws Exception {
         if (notes.length == 0){
             throw new Exception("Array length 0");
         }
-        List<Integer> insufficient_notes_array = new ArrayList<>();
+        ArrayList<Integer> insufficient_notes_array = new ArrayList<>();
         for(int i = 0; i< notes.length; i++){
             int note_rounded = this.round(notes[i]);
             if(note_rounded < 40){
@@ -41,14 +41,14 @@ public class JavaUniversity {
 
 
 
-    public List<Integer> rounded_notes(int[] notes) throws Exception {
+    public ArrayList<Integer> rounded_notes(int[] notes) throws Exception {
         if (notes.length == 0){
             throw new Exception("Array length 0");
         }
-        List<Integer> rounded_notes_array = new ArrayList<>();
+        ArrayList<Integer> rounded_notes_array = new ArrayList<>();
         for(int i = 0; i< notes.length; i++){
             int note_rounded = this.round(notes[i]);
-            rounded_notes_array.add(notes[i]);
+            rounded_notes_array.add(note_rounded);
         }
         return rounded_notes_array;
     }
