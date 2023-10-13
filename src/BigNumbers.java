@@ -30,7 +30,7 @@ public class BigNumbers {
         for(int i = number1.length - 1; i>=0;i--){
 
             Integer digit = (number1[i]-number2[i]-overflow)%10;
-            System.out.printf("d"+digit.toString());
+//            System.out.printf("d"+digit.toString());
 
             if(digit < 0){
                 digit +=10;
@@ -39,13 +39,13 @@ public class BigNumbers {
             else{
                 overflow = 0;
             }
-            System.out.printf("d"+digit.toString());
+//            System.out.printf("d"+digit.toString());
 //            overflow = (number1[i]-number2[i]-overflow);
 //            if (overflow < 0){
 //                overflow = 1;
 //            }
             result.add(0,digit);
-            System.out.println(overflow.toString());
+//            System.out.println(overflow.toString());
 //            overflow = (number1[i]-number2[i]-overflow)/10 * -1;
 
         }
