@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.NavigableMap;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -35,6 +36,21 @@ public class Main {
         Main.test_prob_1_method_2();
         Main.test_prob_1_method_3();
         Main.test_prob_1_method_4();
+
+        Main.test_prob_2_method_1();
+        Main.test_prob_2_method_2();
+        Main.test_prob_2_method_3();
+        Main.test_prob_2_method_4();
+
+        Main.test_prob_3_method_1();
+        Main.test_prob_3_method_2();
+        Main.test_prob_3_method_3();
+        Main.test_prob_3_method_4();
+
+        Main.test_prob_4_method_1();
+        Main.test_prob_4_method_2();
+        Main.test_prob_4_method_3();
+        Main.test_prob_4_method_4();
 
     }
 
@@ -193,6 +209,195 @@ public class Main {
         try{
             int[] array2 ={};
             result = op.minimal_sum(array2);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+    public static void test_prob_3_method_1() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1,2,3};
+        int[] b = {9,1,9};
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.sum(a,b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 0;
+        assert result.get(2) == 4;
+        assert result.get(3) == 2;
+
+        try{
+            int[] c ={0,1};
+            int[] d ={1};
+            result = bn.sum(c,d);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+    public static void test_prob_3_method_2() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1,2,3};
+        int[] b = {9,1,9};
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.difference(b,a);
+        assert result.get(0) == 7;
+        assert result.get(1) == 9;
+        assert result.get(2) == 6;
+
+        try{
+            int[] c ={0,1};
+            int[] d ={1};
+            result = bn.difference(c,d);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void test_prob_3_method_3() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1,2,3};
+        int b = 10;
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.multiplication(a,b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 2;
+        assert result.get(2) == 3;
+        assert result.get(3) == 0;
+
+        try{
+            int[] c ={};
+            int d = 4;
+            result = bn.multiplication(c,d);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void test_prob_3_method_4() throws Exception {
+        BigNumbers bn = new BigNumbers();
+
+        int[] a = {1,2,3};
+        int b = 10;
+
+        ArrayList<Integer> result = new ArrayList<>();
+        result = bn.division(a,b);
+        assert result.get(0) == 1;
+        assert result.get(1) == 2;
+
+        try{
+            int[] c ={};
+            int d = 4;
+            result = bn.division(c,d);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_1() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1,2,3};
+
+        int result = es.billigsteTastatur(a);
+        assert result == 1;
+
+        try{
+            int[] c ={};
+            result = es.billigsteTastatur(c);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_2() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1,2,3};
+
+        int result = es.teurersteGegenstand(a);
+        assert result == 3;
+
+        try{
+            int[] c ={};
+            result = es.teurersteGegenstand(c);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+    public static void test_prob_4_method_3() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1,2,3, 10, 15};
+
+        int result = es.teuersteLaufwerk(a,11);
+        assert result == 10;
+
+        try{
+            int[] c ={};
+            result = es.teuersteLaufwerk(c,10);
+            System.out.println(result);
+            assert false;
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void test_prob_4_method_4() throws Exception {
+        ElectronikShop es = new ElectronikShop();
+
+        int[] a = {1,2,3, 10, 15};
+        int[] b = {16,20,13,25};
+
+        int result = es.setup(25,a,b);
+        assert result == 23;
+
+        try{
+            int[] c ={};
+            int[] d ={10};
+
+            result = es.setup(10,c,d);
             System.out.println(result);
             assert false;
         }

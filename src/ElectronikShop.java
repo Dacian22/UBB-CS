@@ -15,7 +15,10 @@ public class ElectronikShop {
         return min;
     }
 
-    public int teurersteGegenstand(int[] gegenstand){
+    public int teurersteGegenstand(int[] gegenstand) throws Exception {
+        if(gegenstand.length == 0){
+            throw new Exception("Array length 0");
+        }
         int max = Integer.MIN_VALUE;
         for (int i = 0 ;i< gegenstand.length;i++){
             if(gegenstand[i] > max){
@@ -26,7 +29,10 @@ public class ElectronikShop {
         return max;
     }
 
-    public int teuersteLaufwerk(int[] price, int budget){
+    public int teuersteLaufwerk(int[] price, int budget) throws Exception {
+        if(price.length == 0){
+            throw new Exception("Array length 0");
+        }
         int max = Integer.MIN_VALUE;
         for (int i = 0 ;i< price.length;i++){
             if(price[i] > max && price[i] <= budget){
@@ -38,7 +44,10 @@ public class ElectronikShop {
     }
 
 
-    public int setup(int budget, int[] tastaturen, int[] laufwerk){
+    public int setup(int budget, int[] tastaturen, int[] laufwerk) throws Exception {
+        if(tastaturen.length == 0 || laufwerk.length== 0){
+            throw new Exception("Array length 0");
+        }
         int max = Integer.MIN_VALUE;
         Arrays.stream(tastaturen).sorted();
         Arrays.stream(laufwerk).sorted();
