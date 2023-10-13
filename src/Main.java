@@ -1,36 +1,35 @@
 import java.util.ArrayList;
-import java.util.NavigableMap;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        BigNumbers operations = new BigNumbers();
-
-        int[] a = {1,2,3};
-        int[] b = {9,1,9};
-        ArrayList<Integer> result = new ArrayList<>();
-        result = operations.sum(a,b);
-        System.out.printf(result.toString());
-        result = operations.difference(b,a);
-        System.out.printf(result.toString());
-        result = operations.multiplication(a,10);
-        System.out.printf(result.toString());
-        result = operations.division(a,10);
-        System.out.printf(result.toString());
-
-
-        ElectronikShop ec = new ElectronikShop();
-
-        int[] c = {5,1,2,3};
-        int[] d = {8,1,9,7};
-        int result2;
-        result2 = ec.billigsteTastatur(c);
-        System.out.println(result2);
-        result2 = ec.teurersteGegenstand(d);
-        System.out.println(result2);
-        result2 = ec.teuersteLaufwerk(c,2);
-        System.out.println(result2);
-        result2 = ec.setup(15,c,d);
-        System.out.println(result2);
+//        BigNumbers operations = new BigNumbers();
+//
+//        int[] a = {1,2,3};
+//        int[] b = {9,1,9};
+//        ArrayList<Integer> result = new ArrayList<>();
+//        result = operations.sum(a,b);
+//        System.out.printf(result.toString());
+//        result = operations.difference(b,a);
+//        System.out.printf(result.toString());
+//        result = operations.multiplication(a,10);
+//        System.out.printf(result.toString());
+//        result = operations.division(a,10);
+//        System.out.printf(result.toString());
+//
+//
+//        ElectronikShop ec = new ElectronikShop();
+//
+//        int[] c = {5,1,2,3};
+//        int[] d = {8,1,9,7};
+//        int result2;
+//        result2 = ec.billigsteTastatur(c);
+//        System.out.println(result2);
+//        result2 = ec.teurersteGegenstand(d);
+//        System.out.println(result2);
+//        result2 = ec.teuersteLaufwerk(c,2);
+//        System.out.println(result2);
+//        result2 = ec.setup(15,c,d);
+//        System.out.println(result2);
 
         Main.test_prob_1_method_1();
         Main.test_prob_1_method_2();
@@ -59,17 +58,15 @@ public class Main {
         int [] notes ={100,2,3,4};
         ArrayList<Integer> result = new ArrayList<>();
         result = uni.insufficient_notes(notes);
-        System.out.println(result);
         assert result.size() == 3;
 
 
         try{
             int[] notes2 ={};
             result = uni.insufficient_notes(notes2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -79,17 +76,15 @@ public class Main {
         JavaUniversity uni = new JavaUniversity();
         int [] notes ={100,2,3,4};
         float result = uni.average_notes(notes);
-        System.out.println(result);
         assert result == 27.25;
 
 
         try{
             int[] notes2 ={};
             result = uni.average_notes(notes2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -101,7 +96,6 @@ public class Main {
         int [] notes ={100,2,3,4,58};
         ArrayList<Integer> result = new ArrayList<>();
         result = uni.rounded_notes(notes);
-        System.out.println(result);
         assert result.get(4) == 60;
         assert result.get(3) == 4;
 
@@ -109,10 +103,9 @@ public class Main {
         try{
             int[] notes2 ={};
             result = uni.rounded_notes(notes2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -122,17 +115,15 @@ public class Main {
         JavaUniversity uni = new JavaUniversity();
         int [] notes ={2,3,4,58};
         int result = uni.maxima_rounded_note(notes);
-        System.out.println(result);
         assert result == 60;
 
 
         try{
             int[] notes2 ={};
             result = uni.maxima_rounded_note(notes2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -149,10 +140,9 @@ public class Main {
         try{
             int[] array2 ={};
             result = op.maximum(array2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -169,10 +159,9 @@ public class Main {
         try{
             int[] array2 ={};
             result = op.minimum(array2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -189,10 +178,9 @@ public class Main {
         try{
             int[] array2 ={};
             result = op.maximal_sum(array2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -209,10 +197,9 @@ public class Main {
         try{
             int[] array2 ={};
             result = op.minimal_sum(array2);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -235,7 +222,6 @@ public class Main {
             int[] c ={0,1};
             int[] d ={1};
             result = bn.sum(c,d);
-            System.out.println(result);
             assert false;
         }
         catch (Exception e){
@@ -260,10 +246,9 @@ public class Main {
             int[] c ={0,1};
             int[] d ={1};
             result = bn.difference(c,d);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -287,10 +272,9 @@ public class Main {
             int[] c ={};
             int d = 4;
             result = bn.multiplication(c,d);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -312,10 +296,9 @@ public class Main {
             int[] c ={};
             int d = 4;
             result = bn.division(c,d);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -333,10 +316,9 @@ public class Main {
         try{
             int[] c ={};
             result = es.billigsteTastatur(c);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -354,10 +336,9 @@ public class Main {
         try{
             int[] c ={};
             result = es.teurersteGegenstand(c);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -374,10 +355,9 @@ public class Main {
         try{
             int[] c ={};
             result = es.teuersteLaufwerk(c,10);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
@@ -398,10 +378,9 @@ public class Main {
             int[] d ={10};
 
             result = es.setup(10,c,d);
-            System.out.println(result);
             assert false;
         }
-        catch (Exception e){
+        catch (Exception ignored){
 
         }
 
