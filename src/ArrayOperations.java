@@ -1,5 +1,10 @@
+import javax.lang.model.type.NullType;
+
 public class ArrayOperations {
-    public int maximum(int[] array){
+    public int maximum(int[] array) throws Exception {
+        if(array.length == 0){
+            throw new Exception("Array length 0");
+        }
         int max = Integer.MIN_VALUE;
         for (int i = 0 ;i< array.length;i++){
             if(array[i] > max){
@@ -10,7 +15,10 @@ public class ArrayOperations {
         return max;
     }
 
-    public int minimum(int[] array){
+    public int minimum(int[] array) throws Exception {
+        if(array.length == 0){
+            throw new Exception("Array length 0");
+        }
         int min = Integer.MAX_VALUE;
         for (int i = 0 ;i< array.length;i++){
             if(array[i] < min){
@@ -21,7 +29,10 @@ public class ArrayOperations {
         return min;
     }
 
-    int maximal_sum(int[] array){
+    int maximal_sum(int[] array) throws Exception {
+        if(array.length == 0){
+            throw new Exception("Array length 0");
+        }
         int sum = 0;
         int min = this.minimum(array);
 
@@ -32,7 +43,10 @@ public class ArrayOperations {
         return sum - min;
     }
 
-    int minimal_sum(int[] array){
+    int minimal_sum(int[] array) throws Exception {
+        if(array.length == 0){
+            throw new Exception("Array length 0");
+        }
         int sum = 0;
         int max= this.maximum(array);
 

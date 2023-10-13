@@ -14,7 +14,10 @@ public class JavaUniversity {
         return note;
     }
 
-    public List<Integer> insufficient_notes(int[] notes){
+    public List<Integer> insufficient_notes(int[] notes) throws Exception {
+        if (notes.length == 0){
+            throw new Exception("Array length 0");
+        }
         List<Integer> insufficient_notes_array = new ArrayList<>();
         for(int i = 0; i< notes.length; i++){
             int note_rounded = this.round(notes[i]);
@@ -25,7 +28,10 @@ public class JavaUniversity {
         return insufficient_notes_array;
     }
 
-    public float average_notes(int[] notes){
+    public float average_notes(int[] notes) throws Exception {
+        if (notes.length == 0){
+            throw new Exception("Array length 0");
+        }
         int sum=0;
         for(int i = 0; i< notes.length; i++){
             sum+=notes[i];
@@ -35,7 +41,10 @@ public class JavaUniversity {
 
 
 
-    public List<Integer> rounded_notes(int[] notes){
+    public List<Integer> rounded_notes(int[] notes) throws Exception {
+        if (notes.length == 0){
+            throw new Exception("Array length 0");
+        }
         List<Integer> rounded_notes_array = new ArrayList<>();
         for(int i = 0; i< notes.length; i++){
             int note_rounded = this.round(notes[i]);
@@ -44,7 +53,10 @@ public class JavaUniversity {
         return rounded_notes_array;
     }
 
-    public int maxima_rounded_note(int[] notes){
+    public int maxima_rounded_note(int[] notes) throws Exception {
+        if (notes.length == 0){
+            throw new Exception("Array length 0");
+        }
         int max = 0;
         for(int i = 0; i< notes.length; i++){
             int note_rounded = this.round(notes[i]);
